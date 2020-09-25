@@ -21,6 +21,7 @@ on:
       - release/*
       - e2e*
       - loadgen_integration # will remove before merging
+      - workflow-bot # Do not merge. Will delete shortly.
   workflow_dispatch:
     # trigger through UI or API
 jobs:
