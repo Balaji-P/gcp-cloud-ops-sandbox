@@ -39,7 +39,7 @@ def findService(client, service_name, project_id, zone, should_timeout):
 	while not found_service and num_tries <= 50:
 		try:
 			found_service = client.get_service(service)
-		except: # possible exceptions include GoogleAPICallError and ValueError
+		except e: # possible exceptions include GoogleAPICallError and ValueError
 			if should_timeout:
 				num_tries += 1
 			time.sleep(6)
